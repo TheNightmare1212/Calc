@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Calculator
+    public class Calculator
     {
         public static double DoOperation(double num1, double num2, string op)
         {
@@ -35,9 +35,9 @@ namespace Calculator
         }
     }
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             bool endApp = false;
             // Display title as the C# console calculator app.
