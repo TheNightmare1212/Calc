@@ -8,9 +8,6 @@ on:
 
 jobs:
   build:
-env: 
-CODECOV_TOKEN:'6ba84d89-2988-4b27-9915-56e6f4ea5da9'
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,6 +20,12 @@ CODECOV_TOKEN:'6ba84d89-2988-4b27-9915-56e6f4ea5da9'
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal  --collect:"XPlat Code Coverage" 
-    - name: Codecov upload
-      uses: codecov/codecov-action@v2
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+    - uses: codecov/codecov-action@v1
+      with:
+        files: ./Calculator.Tests/TestResults/coverage.opencover.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
+
