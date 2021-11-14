@@ -8,9 +8,10 @@ on:
 
 jobs:
   build:
+env: 
+CODECOV_TOKEN:'6ba84d89-2988-4b27-9915-56e6f4ea5da9'
 
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
