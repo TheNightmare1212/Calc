@@ -224,8 +224,8 @@ var assemblies = [
   {
     "name": "Calculator",
     "classes": [
-      { "name": "Calculator.Calculator", "rp": "Calculator_Calculator.html", "cl": 16, "ucl": 1, "cal": 17, "tl": 111, "ct": "LineCoverage", "mc": "-", "cb": 10, "tb": 10, "lch": [], "bch": [], "hc": [] },
-      { "name": "Calculator.Program", "rp": "Calculator_Program.html", "cl": 0, "ucl": 51, "cal": 51, "tl": 111, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 10, "lch": [], "bch": [], "hc": [] },
+      { "name": "Calculator.Calculator", "rp": "Calculator_Calculator.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 115, "ct": "LineCoverage", "mc": "-", "cb": 10, "tb": 10, "lch": [], "bch": [], "hc": [] },
+      { "name": "Calculator.Program", "rp": "Calculator_Program.html", "cl": 52, "ucl": 4, "cal": 56, "tl": 115, "ct": "LineCoverage", "mc": "-", "cb": 10, "tb": 10, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 
