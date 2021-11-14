@@ -20,10 +20,10 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+      run: dotnet test --collect:"XPlat Code Coverage" 
     - uses: codecov/codecov-action@v1
       with:
-        files: ./Calculator.Tests/TestResults/coverage.opencover.xml
+        files: ./Calculator.Tests/TestResults/*/coverage.cobertura.xml
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: true
